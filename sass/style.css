@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+:root {
+  --Red: hsl(0, 100%, 68%);
+  --Very-Dark-Blue: hsl(230, 29%, 20%);
+  --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+  --Grayish-Blue: hsl(231, 7%, 65%);
+  --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 60%;
+  background-color: var(--Light-Grayish-Blue);
+  z-index: -1;
+  border-bottom-left-radius: 3rem;
+}
+
+body .headersection {
+  padding: 2rem;
+}
+
+body .headersection header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body .headersection header .menu {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+body .headersection header .close {
+  display: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 0.1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+body .headersection nav {
+  display: none;
+  width: 85%;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 12px -5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 12px -5px rgba(0, 0, 0, 0.6);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  border-radius: 0.3rem;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+body .headersection nav ul {
+  text-align: center;
+  list-style: none;
+}
+
+body .headersection nav ul li {
+  padding: 0.5rem 0 1rem 0;
+}
+
+body .headersection nav ul li a {
+  color: var(--Very-Dark-Blue);
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+body .headersection nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--Very-Dark-Blue);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .headersection nav ul li a:hover::after {
+  width: 100%;
+}
+
+body .headersection nav ul .cta {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid var(--Grayish-Blue);
+}
+
+body .headersection nav ul .cta a {
+  color: var(--Grayish-Blue);
+}
+
+body .headersection nav ul .cta a::after {
+  background-color: var(--Grayish-Blue);
+}
+
+body .flextry .imagesection {
+  overflow: hidden;
+}
+
+body .flextry .imagesection img {
+  width: 165%;
+}
+
+body .flextry .description {
+  padding: 6rem 2rem 2.5rem 2rem;
+}
+
+body .flextry .description h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--Grayish-Blue);
+  letter-spacing: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+body .flextry .description h3 span {
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Grayish-Blue);
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+
+body .flextry .description h2 {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 1rem;
+}
+
+body .flextry .description p {
+  color: var(--Dark-Grayish-Blue);
+  font-size: 18px;
+  padding-right: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+body .flextry .description .button-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .flextry .description .button-preview .demoCta {
+  border: none;
+  outline: none;
+  background-color: var(--Red);
+  color: var(--Light-Grayish-Blue);
+  padding: 0.6rem 1.5rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .flextry .description .button-preview .demoCta:hover {
+  background-color: #ff8080;
+}
+
+body .flextry .description .button-preview h3 {
+  margin-bottom: 0;
+  letter-spacing: 0.15rem;
+}
+
+body footer {
+  padding-bottom: 0.5rem;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  body .headersection {
+    padding: 5rem 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .headersection header .menu {
+    display: none;
+  }
+  body .headersection nav {
+    display: block;
+    width: 50%;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0;
+    top: 4.5rem;
+    left: 70%;
+    -webkit-transform: translateX(-70%);
+            transform: translateX(-70%);
+  }
+  body .headersection nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .headersection nav ul li {
+    margin-left: 5rem;
+  }
+  body .headersection nav ul .cta {
+    border-top: none;
+    position: relative;
+  }
+  body .headersection nav ul .cta::before {
+    content: "";
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: var(--Grayish-Blue);
+    left: -180%;
+    top: 45%;
+    -webkit-transform: translate(180%, -45%);
+            transform: translate(180%, -45%);
+  }
+  body .flextry {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  body .flextry .imagesection img {
+    width: 150%;
+  }
+  body .flextry .description {
+    width: 60%;
+    padding-left: 10rem;
+  }
+  body .flextry .description .button-preview {
+    padding-right: 3rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
